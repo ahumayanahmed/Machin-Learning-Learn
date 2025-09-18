@@ -60,3 +60,13 @@ plt.ylabel('Ending')
 plt.title('Linear Regression Fit')
 plt.legend()
 plt.show()
+#loss and cost function mse & mae
+from sklearn.metrics import mean_squared_error,mean_absolute_error
+df['loss']=df['Ending']-df['predict_y']
+print(df)
+mse=mean_squared_error(df['Ending'],df['predict_y'])
+print('\n MSE:',mse)
+mae=mean_absolute_error(df['Ending'],df['predict_y'])
+print('\n MAE:',mae)
+#performance
+print(reg.score(x,y))
